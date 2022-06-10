@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         app:counterEnabled="true"
         app:counterMaxLength="160">
+
         <EditText
             android:id="@+id/etCompose"
             android:layout_width="match_parent"
@@ -23,10 +24,9 @@
             android:layout_marginTop="5dp"
             android:ems="10"
             android:gravity="start|top"
-            android:hint="what happening?"
+            android:hint="What's happening?"
             android:inputType="textMultiLine"
-            android:minLines="5"
-            />
+            android:minLines="5" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -34,9 +34,16 @@
         android:id="@+id/twButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etCompose"
+        android:layout_below="@+id/username_text_input_layout"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="11dp"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="5dp"
-        android:text="Tweet" />
+        android:layout_marginEnd="310dp"
+
+        android:background="#1DA1F2"
+        android:radius="15dp"
+        android:text="Tweet"
+        android:textColor="#FFFFFF"
+        android:visibility="visible" />
 </RelativeLayout>

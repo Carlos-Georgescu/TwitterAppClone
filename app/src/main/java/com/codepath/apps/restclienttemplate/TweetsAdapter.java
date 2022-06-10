@@ -63,6 +63,10 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
         TextView tvScreenName;
         ImageView twPic;
         TextView twTime;
+        TextView twLikes;
+        ImageView twPicture;
+        TextView twReply;
+        TextView twRetweet;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -73,13 +77,22 @@ public class TweetsAdapter extends RecyclerView.Adapter<TweetsAdapter.ViewHolder
             tvScreenName = itemView.findViewById(R.id.tvScreenName);
             twPic = itemView.findViewById(R.id.twPicture);
             twTime = itemView.findViewById(R.id.twTime);
+            twLikes = itemView.findViewById(R.id.twLike);
+            twPicture = itemView.findViewById(R.id.twLikePicture);
+            twReply = itemView.findViewById(R.id.twComment);
+            twRetweet  = itemView.findViewById(R.id.tvRetweet);
+           // twReply  = itemView.findViewById(R.id.twReteet);
         }
 
         public void bind(Tweet tweet) {
             tvBody.setText(tweet.body);
             tvScreenName.setText(tweet.user.screenName);
             Glide.with(context).load(tweet.user.publicImageURL).into(ivProfileImage);
+            twReply.setText("25");
             twTime.setText(tweet.time);
+            twLikes.setText(Integer.toString(tweet.likedAmounts));
+            twRetweet.setText(Integer.toString(tweet.retweetCount));
+
             if(tweet.hasPicture)
             {
                 twPic.setVisibility(View.VISIBLE);

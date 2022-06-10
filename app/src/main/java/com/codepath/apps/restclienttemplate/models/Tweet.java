@@ -25,6 +25,9 @@ public class Tweet {
     public String imageURL;
     public  boolean hasPicture;
     public String time;
+    public int likedAmounts;
+    public int retweetCount;
+    public int replyCount;
 
     public Tweet(){}
 
@@ -35,7 +38,11 @@ public class Tweet {
         tweet.body = jsonObject.getString("text");
         tweet.createdAt = jsonObject.getString("created_at");
         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
+        tweet.retweetCount = jsonObject.getInt("retweet_count");
 
+        // I put the value of 25, as I do not have a Premium Twitter API account to actually access this
+        tweet.replyCount = 25;
+        tweet.likedAmounts = (int) jsonObject.getInt("favorite_count");
         tweet.time = tweet.getRelativeTimeAgo(tweet.createdAt);
 
         JSONObject entities = jsonObject.getJSONObject("entities");
@@ -71,6 +78,7 @@ public class Tweet {
         return relativeDate;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public static List<Tweet> fromJsonArray(JSONArray jsonArray) throws JSONException {
         List<Tweet> tweets = new ArrayList<>();
 

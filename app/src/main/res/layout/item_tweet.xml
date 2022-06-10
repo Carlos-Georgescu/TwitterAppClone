@@ -29,6 +29,8 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/ivProfile"
+        android:autoLink="all"
+        android:linksClickable="true"
         tools:text="this is my tweet" />
 
     <ImageView
@@ -37,8 +39,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvBody"
         android:layout_alignEnd="@+id/tvBody"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="1dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -48,4 +50,59 @@
         android:layout_marginStart="15dp"
         android:layout_toEndOf="@+id/tvScreenName"
         android:text="time" />
+
+    <ImageView
+        android:id="@+id/twLikePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/twPicture"
+        android:src="@android:drawable/star_big_on" />
+
+    <TextView
+        android:id="@+id/twLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/twPicture"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/twLikePicture"
+        android:text="likes" />
+
+    <ImageView
+        android:id="@+id/twReplyImage"
+        android:layout_width="39dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/twPicture"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/twLike" />
+
+    <TextView
+        android:id="@+id/tvRetweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/twPicture"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/twReplyImage"
+        android:text="TextView" />
+
+    <ImageView
+        android:id="@+id/twCommentImage"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/twPicture"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/tvRetweet" />
+
+    <TextView
+        android:id="@+id/twComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/twPicture"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/twCommentImage"
+        android:text="TextView" />
 </RelativeLayout>
