@@ -33,7 +33,7 @@ The following **optional** features are implemented:
 * [ ] User can view more tweets as they scroll with infinite pagination
 * [ ] Compose tweet functionality is built using modal overlay
 * [ x] Links in tweets are clickable and will launch the web browser 
-* [ x] User can **click a link within a tweet body** on tweet details view. The click will launch the web browser with relevant page opened.
+* [ ] User can **click a link within a tweet body** on tweet details view. The click will launch the web browser with relevant page opened.
 * [x ] Replace all icon drawables and other static image assets with [vector drawables](http://guides.codepath.org/android/Drawables#vector-drawables) where appropriate.
 * [ ] User can view following / followers list through any profile they view.
 * [ ] Use the View Binding library to reduce view boilerplate.
