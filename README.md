@@ -42,7 +42,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [ x] People can see how many retweets and likes there are on each post
 
 ## Video Walkthrough
 
